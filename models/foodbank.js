@@ -23,12 +23,18 @@ module.exports = function(sequelize, DataTypes) {
         },
         stateAbr: {
             type: DataTypes.STRING
+        },
+        zipCode: {
+            type: DataTypes.STRING
         }
     })
     FoodBank.associate = function(models) {
         // add associations here
         // Orders will only ever belong to a Customer or a FoodBank and if either are deleted the order should be
-        FoodBank.hasMany(models.Orders, {
+        FoodBank.hasOne(models.Order, {
+            onDelete: "cascade"
+        });
+        FoodBank.hasOne(models.Pantry, {
             onDelete: "cascade"
         });
     };
