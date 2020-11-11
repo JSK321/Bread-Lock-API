@@ -1,11 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     // Store Customer values for interaction with other models
-    const Customer = sequelize.define("Customer", {
-        firstName: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        lastName: {
+    const FoodBank = sequelize.define("FoodBank", {
+        bankName: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -14,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        // Everything else "can" be null
+        // Everything else "can" be null, but most won't
         phone: {
             type: DataTypes.STRING
         },
@@ -27,21 +23,24 @@ module.exports = function(sequelize, DataTypes) {
         },
         stateAbr: {
             type: DataTypes.STRING
-        }, 
+        },
         zipCode: {
             type: DataTypes.STRING
         }
     })
-    Customer.associate = function(models) {
+    FoodBank.associate = function(models) {
         // add associations here
         // Orders will only ever belong to a Customer or a FoodBank and if either are deleted the order should be
-        Customer.hasMany(models.Order, {
+        FoodBank.hasOne(models.Order, {
+            onDelete: "cascade"
+        });
+        FoodBank.hasOne(models.Pantry, {
             onDelete: "cascade"
         });
     };
     
 
-    return Customer;
+    return FoodBank;
 }
 
 // In the routes you'd need a Character.addClass(id of the class), for post request
