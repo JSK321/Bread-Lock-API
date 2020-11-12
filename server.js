@@ -18,8 +18,8 @@ var db = require("./models");
 
 // Rename Controllers to Reflect Bread-Lock
 
-// const characterController = require('./controllers/character-controller')
-// app.use(characterController)
+const customerController = require('./controllers/customer-controller')
+app.use(customerController)
 
 // const htmlController = require('./controllers/html-controller')
 // app.use(htmlController)
