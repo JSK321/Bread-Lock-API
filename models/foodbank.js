@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     })
     FoodBank.associate = function(models) {
         // add associations here
-        // Orders will only ever belong to a Customer or a FoodBank and if either are deleted the order should be
+        // Orders will only ever belong to a Customer or a FoodBanks and if either are deleted the order should be
         FoodBank.hasOne(models.Order, {
             onDelete: "cascade"
         });
