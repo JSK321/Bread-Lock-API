@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     // Store Customer values for interaction with other models
-    const Orders = sequelize.define("Orders", {
+    const Order = sequelize.define("Order", {
         order_date: {
             type: DataTypes.DATE,
             allowNull: false
@@ -10,16 +10,16 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: false
         }
     })
-    Orders.associate = function(models) {
+    Order.associate = function(models) {
         // add associations here
         Character.belongsToMany(models.Customers);
         Character.belongsTo(models.FoodBanks);
         // Orders will only ever belong to a Customer or a Orders and if either are deleted the order should be
-        Orders.hasMany(models.OrderItems, {
+        Order.hasMany(models.OrderItem, {
             onDelete: "cascade"
         });
     };
     
 
-    return Orders;
+    return Order;
 }
