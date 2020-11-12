@@ -12,8 +12,8 @@ module.exports = function(sequelize, DataTypes) {
     })
     Pantry.associate = function(models) {
         // add associations here
-        Pantry.belongsToMany(models.Stock);
-        Pantry.belongsTo(models.FoodBanks);        
+        Pantry.belongsTo(models.Stock);
+        Pantry.belongsTo(models.FoodBank);        
     };
     
 

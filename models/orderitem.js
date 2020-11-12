@@ -8,8 +8,8 @@ module.exports = function(sequelize, DataTypes) {
     })
     OrderItem.associate = function(models) {
         // add associations here
-        Character.belongsToMany(models.Order);
-        Character.belongsToMany(models.Stock);
+        OrderItem.belongsTo(models.Order);
+        OrderItem.belongsTo(models.Stock);
     };
     
 

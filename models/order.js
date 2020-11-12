@@ -12,8 +12,8 @@ module.exports = function(sequelize, DataTypes) {
     })
     Order.associate = function(models) {
         // add associations here
-        Order.belongsToMany(models.Customers);
-        Order.belongsTo(models.FoodBanks);
+        Order.belongsTo(models.Customer);
+        Order.belongsTo(models.FoodBank);
         // Orders will only ever belong to a Customer or a Orders and if either are deleted the order should be
         Order.hasMany(models.OrderItem, {
             onDelete: "cascade"
