@@ -28,7 +28,7 @@ app.use(customerController)
 
 // Remember force: true restarts the server AND will need RESEEDING
 
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {
         console.log("App listening on PORT " + PORT);
     });
