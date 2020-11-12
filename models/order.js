@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     // Store Customer values for interaction with other models
     const Order = sequelize.define("Order", {
-        order_date: {
+        orderDate: {
             type: DataTypes.DATE,
             allowNull: false
         },
