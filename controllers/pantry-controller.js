@@ -4,14 +4,14 @@ const router = express.Router();
 
 const db = require("../models");
 
-router.get("/api/pantry/get/all", (req, res) => {
-    db.Foodbank.findAll().then((pantry) => {
+router.get("/get/all", (req, res) => {
+    db.Pantry.findAll().then((pantry) => {
         res.json(pantry);
         console.log(pantry);
     });
 });
 
-router.post("/api/pantry/post", function (req, res) {
+router.post("/post", function (req, res) {
     db.Pantry.create({
       notClaimed: req.body.notClaimed,
       claimed: req.body.claimed
@@ -20,7 +20,7 @@ router.post("/api/pantry/post", function (req, res) {
     });
 });
 
-router.put("/api/pantry/edit/:id", (req, res) => {
+router.put("/edit/:id", (req, res) => {
     db.Pantry.update({
       notClaimed: req.body.notClaimed,
       claimed: req.body.claimed
@@ -35,7 +35,7 @@ router.put("/api/pantry/edit/:id", (req, res) => {
     })
   })
 
-router.delete("/api/pantry/delete/:id", (req, res) => {
+router.delete("/delete/:id", (req, res) => {
     console.log(req.params.id);
     db.Pantry.destroy({ where: { id: req.params.id } }).then(removePantry => {
         console.log("Deleted");

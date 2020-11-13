@@ -4,14 +4,14 @@ const router = express.Router();
 
 const db = require("../models");
 
-router.get("/api/order/get/all", (req, res) => {
+router.get("/get/all", (req, res) => {
     db.Order.findAll().then((order) => {
         res.json(order);
         console.log(order);
     });
 });
 
-router.post("/api/order/post", function (req, res) {
+router.post("/post", function (req, res) {
     db.Order.create({
         orderDate: req.body.orderDate,
         recieved: req.body.recieved
@@ -20,7 +20,7 @@ router.post("/api/order/post", function (req, res) {
     });
 });
 
-router.put("/api/order/edit/:id", (req, res) => {
+router.put("/edit/:id", (req, res) => {
     db.Order.update({
         orderDate: req.body.orderDate,
         recieved: req.body.recieved
@@ -35,7 +35,7 @@ router.put("/api/order/edit/:id", (req, res) => {
     })
   })
 
-router.delete("/api/order/delete/:id", (req, res) => {
+router.delete("/delete/:id", (req, res) => {
     console.log(req.params.id);
     db.Order.destroy({ where: { id: req.params.id } }).then(removeOrder => {
         console.log("Deleted");
