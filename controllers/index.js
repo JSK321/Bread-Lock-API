@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const customerRoutes = require(".customer-Controller");
-const foodbankRoutes = require(".foodbank-Controller");
-const orderRoutes = require(".order-Controller");
-const orderitemRoutes = require(".orderitem-Controller");
-const pantryRoutes = require(".pantry-Controller");
-const stockRoutes = require(".stock-Controller");
+const customerRoutes = require("./customer-controller");
+const foodbankRoutes = require("./foodbank-controller");
+const orderRoutes = require("./order-controller");
+const orderitemRoutes = require("./orderitem-controller");
+const pantryRoutes = require("./pantry-controller");
+const stockRoutes = require("./stock-controller");
 
 router.get("/", (req,res)=>{
     res.send("Welcome to BreadLock")
