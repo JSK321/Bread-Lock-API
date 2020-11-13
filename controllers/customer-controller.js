@@ -4,14 +4,14 @@ const router = express.Router();
 
 const db = require("../models");
 
-router.get("/api/customer/get/all", (req, res) => {
+router.get("/get/all", (req, res) => {
     db.Customer.findAll().then((customer) => {
         res.json(customer);
         console.log(customer);
     });
 });
 
-router.post("/api/customer/post", function (req, res) {
+router.post("/post", function (req, res) {
     db.Customer.create({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -26,7 +26,7 @@ router.post("/api/customer/post", function (req, res) {
     });
 });
 
-router.put("/api/customer/edit/:id", (req, res) => {
+router.put("/edit/:id", (req, res) => {
     db.Customer.update({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -47,7 +47,7 @@ router.put("/api/customer/edit/:id", (req, res) => {
     })
   })
 
-router.delete("/api/customer/delete/:id", (req, res) => {
+router.delete("/delete/:id", (req, res) => {
     console.log(req.params.id);
     db.Customer.destroy({ where: { id: req.params.id } }).then(removeCustomer => {
         console.log("Deleted");
