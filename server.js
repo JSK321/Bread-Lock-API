@@ -1,5 +1,6 @@
 //dependencies 
 const express = require("express")
+const cors = require('cors')
 
 
 //sets up the express app
@@ -9,20 +10,23 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"))
-
 //require models for syncing
 var db = require("./models");
 
 //Import Routes for controllers
+var allRoutes = require('./controllers')
 
-// Rename Controllers to Reflect Bread-Lock
+// Production Cors
+// Fix Heroku Deployed to the actual live site
+// app.use(cors({
+//     origin:["https://herokudeployed.com"]
+// }))
 
-const customerController = require('./controllers/customer-controller')
-app.use(customerController)
+// Dev Cors
+app.use(cors())
 
-// const htmlController = require('./controllers/html-controller')
-// app.use(htmlController)
+//Set up routes
+app.use('/', allRoutes);
 
 //syncing our sequelize models and then starting express app
 
