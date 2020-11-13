@@ -1,0 +1,39 @@
+[
+    {
+      "model": "Foodbank",
+      "data": {
+        "bankName": "University District Food Bank",
+        "email":"",
+        "phone":"",
+        "address":"",
+        "cityName":"",
+        "stateAbr":"",
+        "zipCode":""
+      }
+    },
+    {
+      "model": "Foodbank",
+      "data": {
+        "bankName": "University District Food Bank",
+        "email":"",
+        "phone":"",
+        "address":"",
+        "cityName":"",
+        "stateAbr":"",
+        "zipCode":""
+      }
+    },
+    {
+        "model": "Foodbank",
+        "data": {
+          "bankName": "University District Food Bank",
+          "email":"",
+          "phone":"",
+          "address":"",
+          "cityName":"",
+          "stateAbr":"",
+          "zipCode":""
+        }
+      }
+    
+  ]
