@@ -34,6 +34,7 @@ app.use('/', allRoutes);
 
 db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {
+        seedModels()
         console.log("App listening on PORT " + PORT);
     });
 });
