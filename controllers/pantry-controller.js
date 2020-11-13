@@ -5,7 +5,7 @@ const router = express.Router();
 const db = require("../models");
 
 router.get("/get/all", (req, res) => {
-    db.Foodbank.findAll().then((pantry) => {
+    db.Pantry.findAll().then((pantry) => {
         res.json(pantry);
         console.log(pantry);
     });

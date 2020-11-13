@@ -5,14 +5,14 @@ const router = express.Router();
 const db = require("../models");
 
 router.get("/get/all", (req, res) => {
-    db.Orderitem.findAll().then((orderitem) => {
+    db.OrderItem.findAll().then((orderitem) => {
         res.json(orderitem);
         console.log(orderitem);
     });
 });
 
 router.post("/post", function (req, res) {
-    db.Orderitem.create({
+    db.OrderItem.create({
       orderAmount: req.body.orderAmount
     }).then(function (dbOrderitem) {
         res.json(dbOrderitem);
@@ -20,7 +20,7 @@ router.post("/post", function (req, res) {
 });
 
 router.put("/edit/:id", (req, res) => {
-    db.Orderitem.update({
+    db.OrderItem.update({
       orderAmount: req.body.orderAmount
     }, {
       where: {
@@ -35,7 +35,7 @@ router.put("/edit/:id", (req, res) => {
 
 router.delete("/delete/:id", (req, res) => {
     console.log(req.params.id);
-    db.Orderitem.destroy({ where: { id: req.params.id } }).then(removeOrderitem => {
+    db.OrderItem.destroy({ where: { id: req.params.id } }).then(removeOrderitem => {
         console.log("Deleted");
         res.json(removeOrderitem);
     });

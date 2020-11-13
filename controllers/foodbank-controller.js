@@ -5,14 +5,14 @@ const router = express.Router();
 const db = require("../models");
 
 router.get("/get/all", (req, res) => {
-    db.Foodbank.findAll().then((foodbank) => {
+    db.FoodBank.findAll().then((foodbank) => {
         res.json(foodbank);
         console.log(foodbank);
     });
 });
 
 router.post("/post", function (req, res) {
-    db.Foodbank.create({
+    db.FoodBank.create({
         bankName: req.body.bankName,
         phone: req.body.phone,
         email: req.body.email,
@@ -26,7 +26,7 @@ router.post("/post", function (req, res) {
 });
 
 router.put("/edit/:id", (req, res) => {
-    db.Foodbank.update({
+    db.FoodBank.update({
         bankName: req.body.bankName,
         phone: req.body.phone,
         email: req.body.email,
@@ -47,7 +47,7 @@ router.put("/edit/:id", (req, res) => {
 
 router.delete("/delete/:id", (req, res) => {
     console.log(req.params.id);
-    db.Foodbank.destroy({ where: { id: req.params.id } }).then(removeFoodbank => {
+    db.FoodBank.destroy({ where: { id: req.params.id } }).then(removeFoodbank => {
         console.log("Deleted");
         res.json(removeFoodbank);
     });
