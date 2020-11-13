@@ -38,5 +38,3 @@ db.sequelize.sync({ force: false }).then(function() {
     });
 });
 
-
-// In the routes you'd need a Character.addClass(id of the class), for post request
