@@ -1,0 +1,39 @@
+[
+    {
+      "model": "Foodbank",
+      "data": {
+        "bankName": "University District Food Bank",
+        "email":"na@na.com",
+        "phone":"(206) 523-7060",
+        "address":"5017 Roosevelt Way NE",
+        "cityName":"Seattle",
+        "stateAbr":"WA",
+        "zipCode":"98105"
+      }
+    },
+    {
+      "model": "Foodbank",
+      "data": {
+        "bankName": "West Seattle Food Bank",
+        "email":"na@na.com",
+        "phone":"206.932.9023",
+        "address":"3419 Southwest Morgan Street",
+        "cityName":"Seattle",
+        "stateAbr":"WA",
+        "zipCode":"98126"
+      }
+    },
+    {
+        "model": "Foodbank",
+        "data": {
+          "bankName": "Rainier Valley Food Bank",
+          "email":"info@rvfb.org",
+          "phone":"(206) 723-4105",
+          "address":"4205 Rainier Ave S",
+          "cityName":"(206) 723-4105",
+          "stateAbr":"WA",
+          "zipCode":"98118"
+        }
+      }
+    
+  ]
