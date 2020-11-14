@@ -4,15 +4,15 @@ const router = express.Router();
 
 const db = require("../models");
 
-router.get("/api/foodbank/get/all", (req, res) => {
-    db.Foodbank.findAll().then((foodbank) => {
+router.get("/get/all", (req, res) => {
+    db.FoodBank.findAll().then((foodbank) => {
         res.json(foodbank);
         console.log(foodbank);
     });
 });
 
-router.post("/api/foodbank/post", function (req, res) {
-    db.Foodbank.create({
+router.post("/post", function (req, res) {
+    db.FoodBank.create({
         bankName: req.body.bankName,
         phone: req.body.phone,
         email: req.body.email,
@@ -25,8 +25,8 @@ router.post("/api/foodbank/post", function (req, res) {
     });
 });
 
-router.put("/api/foodbank/edit/:id", (req, res) => {
-    db.Foodbank.update({
+router.put("/edit/:id", (req, res) => {
+    db.FoodBank.update({
         bankName: req.body.bankName,
         phone: req.body.phone,
         email: req.body.email,
@@ -45,9 +45,9 @@ router.put("/api/foodbank/edit/:id", (req, res) => {
     })
   })
 
-router.delete("/api/foodbank/delete/:id", (req, res) => {
+router.delete("/delete/:id", (req, res) => {
     console.log(req.params.id);
-    db.Foodbank.destroy({ where: { id: req.params.id } }).then(removeFoodbank => {
+    db.FoodBank.destroy({ where: { id: req.params.id } }).then(removeFoodbank => {
         console.log("Deleted");
         res.json(removeFoodbank);
     });
