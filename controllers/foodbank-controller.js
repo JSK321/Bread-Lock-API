@@ -12,6 +12,7 @@ router.get("/get/all", (req, res) => {
 });
 
 router.post("/post", function (req, res) {
+  console.log(req);
     db.FoodBank.create({
         bankName: req.body.bankName,
         phone: req.body.phone,

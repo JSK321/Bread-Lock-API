@@ -26,6 +26,12 @@ module.exports = function(sequelize, DataTypes) {
         },
         zipCode: {
             type: DataTypes.STRING
+        },
+        latutude:{
+            type: DataTypes.FLOAT
+        },
+        longitude: {
+            type: DataTypes.FLOAT
         }
     })
     FoodBank.associate = function(models) {
