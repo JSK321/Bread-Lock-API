@@ -33,8 +33,8 @@ module.exports = function(sequelize, DataTypes) {
         longitude: {
             type: DataTypes.DOUBLE(10,7)
         }
-
     })
+    
     FoodBank.associate = function(models) {
         // add associations here
         // Orders will only ever belong to a Customer or a FoodBanks and if either are deleted the order should be
