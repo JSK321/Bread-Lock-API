@@ -4,8 +4,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 1,
-            "foodBankId": 1
+            "StockId": 1,
+            "FoodBankId": 1
             
         }
     },
@@ -14,8 +14,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 2,
-            "foodBankId": 1
+            "StockId": 2,
+            "FoodBankId": 1
             
         }
     },
@@ -24,8 +24,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 3,
-            "foodBankId": 1
+            "StockId": 3,
+            "FoodBankId": 1
             
         }
     },
@@ -34,8 +34,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 4,
-            "foodBankId": 1
+            "StockId": 4,
+            "FoodBankId": 1
             
         }
     },
@@ -44,8 +44,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 5,
-            "foodBankId": 1
+            "StockId": 5,
+            "FoodBankId": 1
             
         }
     },
@@ -54,8 +54,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 6,
-            "foodBankId": 1
+            "StockId": 6,
+            "FoodBankId": 1
             
         }
     },
@@ -64,8 +64,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 7,
-            "foodBankId": 1
+            "StockId": 7,
+            "FoodBankId": 1
             
         }
     },
@@ -74,8 +74,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 8,
-            "foodBankId": 1
+            "StockId": 8,
+            "FoodBankId": 1
             
         }
     },
@@ -84,8 +84,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 1,
-            "foodBankId": 2
+            "StockId": 1,
+            "FoodBankId": 2
             
         }
     },
@@ -94,8 +94,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 2,
-            "foodBankId": 2
+            "StockId": 2,
+            "FoodBankId": 2
             
         }
     },
@@ -104,8 +104,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 3,
-            "foodBankId": 2
+            "StockId": 3,
+            "FoodBankId": 2
             
         }
     },
@@ -114,8 +114,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 4,
-            "foodBankId": 2
+            "StockId": 4,
+            "FoodBankId": 2
             
         }
     },
@@ -124,8 +124,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 5,
-            "foodBankId": 2
+            "StockId": 5,
+            "FoodBankId": 2
             
         }
     },
@@ -134,8 +134,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 6,
-            "foodBankId": 2
+            "StockId": 6,
+            "FoodBankId": 2
             
         }
     },
@@ -144,8 +144,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 7,
-            "foodBankId": 2
+            "StockId": 7,
+            "FoodBankId": 2
             
         }
     },
@@ -154,8 +154,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 8,
-            "foodBankId": 2
+            "StockId": 8,
+            "FoodBankId": 2
             
         }
     },
@@ -164,8 +164,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 1,
-            "foodBankId": 3
+            "StockId": 1,
+            "FoodBankId": 3
             
         }
     },
@@ -174,8 +174,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 2,
-            "foodBankId": 3
+            "StockId": 2,
+            "FoodBankId": 3
             
         }
     },
@@ -184,8 +184,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 3,
-            "foodBankId": 3
+            "StockId": 3,
+            "FoodBankId": 3
             
         }
     },
@@ -194,8 +194,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 4,
-            "foodBankId": 3
+            "StockId": 4,
+            "FoodBankId": 3
             
         }
     },
@@ -204,8 +204,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 5,
-            "foodBankId": 3
+            "StockId": 5,
+            "FoodBankId": 3
             
         }
     },
@@ -214,8 +214,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 6,
-            "foodBankId": 3
+            "StockId": 6,
+            "FoodBankId": 3
             
         }
     },
@@ -224,8 +224,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 7,
-            "foodBankId": 3
+            "StockId": 7,
+            "FoodBankId": 3
             
         }
     },
@@ -234,8 +234,8 @@
         "data": {
             "notClaimed": 1000,
             "claimed": 0,
-            "stockId": 8,
-            "foodBankId": 3
+            "StockId": 8,
+            "FoodBankId": 3
             
         }
     }
