@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS `sequelize-mixr`;
-CREATE DATABASE `sequelize-mixr`;
+DROP DATABASE IF EXISTS `sequelize-breadLock`;
+CREATE DATABASE `sequelize-breadLock`;
