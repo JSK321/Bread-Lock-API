@@ -7,6 +7,9 @@ module.exports = function (){
                 console.log("success")
                     sequelize_fixtures.loadFile("./fixtures/stockSeeds.json", models).then(function(){
                     console.log("success")
+                        sequelize_fixtures.loadFile("./fixtures/pantrySeeds.json", models).then(function(){
+                        console.log("success")
+                    });
                 });
             });
         });
