@@ -8,7 +8,9 @@
         "address":"5017 Roosevelt Way NE",
         "cityName":"Seattle",
         "stateAbr":"WA",
-        "zipCode":"98105"
+        "zipCode":"98105",
+        "latitude": "47.6655423",
+        "longtitude": "-122.3200282"
       }
     },
     {
@@ -20,7 +22,10 @@
         "address":"3419 Southwest Morgan Street",
         "cityName":"Seattle",
         "stateAbr":"WA",
-        "zipCode":"98126"
+        "zipCode":"98126",
+        "latitude": "47.5632411",
+        "longtitude": "-122.3668553"
+
       }
     },
     {
@@ -32,7 +37,10 @@
           "address":"4205 Rainier Ave S",
           "cityName":"(206) 723-4105",
           "stateAbr":"WA",
-          "zipCode":"98118"
+          "zipCode":"98118",
+          "latitude": "47.5653692",
+          "longtitude": "-122.2911155"
+  
         }
       }
     
