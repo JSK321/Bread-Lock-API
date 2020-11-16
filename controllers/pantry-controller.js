@@ -11,6 +11,15 @@ router.get("/get/all", (req, res) => {
     });
 });
 
+router.get("/get/:id", (req, res) => {
+  db.Pantry.findAll({where: {FoodBankId: req.params.id},
+    include: [db.Stock] }).then((foodbank) => {
+      res.json(foodbank);
+      console.log(foodbank);
+  });
+});
+
+
 router.post("/post", function (req, res) {
     db.Pantry.create({
       notClaimed: req.body.notClaimed,
