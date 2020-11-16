@@ -1,6 +1,6 @@
 [
     {
-      "model": "Foodbank",
+      "model": "FoodBank",
       "data": {
         "bankName": "University District Food Bank",
         "email":"na@na.com",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "model": "Foodbank",
+      "model": "FoodBank",
       "data": {
         "bankName": "West Seattle Food Bank",
         "email":"na@na.com",
@@ -24,7 +24,7 @@
       }
     },
     {
-        "model": "Foodbank",
+        "model": "FoodBank",
         "data": {
           "bankName": "Rainier Valley Food Bank",
           "email":"info@rvfb.org",
