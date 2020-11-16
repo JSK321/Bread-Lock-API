@@ -1,0 +1,59 @@
+[
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 1,
+            "size":20
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 1,
+            "size":21
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 1,
+            "size":34
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 1,
+            "size":24
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 1,
+            "size":5
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 1,
+            "size":2
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 1,
+            "size":39
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": 2,
+            "size":1
+        }
+    }
+    
+]
