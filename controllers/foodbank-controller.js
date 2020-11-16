@@ -11,6 +11,13 @@ router.get("/get/all", (req, res) => {
     });
 });
 
+router.get("/get/:id", (req, res) => {
+  db.FoodBank.findOne({where: {id: req.params.id}}).then((foodbank) => {
+      res.json(foodbank);
+      console.log(foodbank);
+  });
+});
+
 router.post("/post", function (req, res) {
   console.log("I made it to the backend");
     db.FoodBank.create({
