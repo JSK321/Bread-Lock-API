@@ -5,7 +5,7 @@ const router = express.Router();
 const db = require("../models");
 
 router.get("/get/all", (req, res) => {
-    db.Pantry.findAll().then((pantry) => {
+    db.Pantry.findAll({include: [db.Stock] }).then((pantry) => {
         res.json(pantry);
         console.log(pantry);
     });
@@ -23,7 +23,9 @@ router.get("/get/:id", (req, res) => {
 router.post("/post", function (req, res) {
     db.Pantry.create({
       notClaimed: req.body.notClaimed,
-      claimed: req.body.claimed
+      claimed: req.body.claimed, 
+      FoodBankId: req.body.FoodBankId,
+      StockId: req.body.StockId
     }).then(function (dbPantry) {
         res.json(dbPantry);
     });
