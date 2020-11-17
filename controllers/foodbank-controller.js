@@ -1,5 +1,6 @@
 const express = require("express");
 
+
 const router = express.Router();
 
 const db = require("../models");
@@ -19,6 +20,7 @@ router.get("/get/:id", (req, res) => {
 });
 
 router.post("/post", function (req, res) {
+  console.log(req.body)
   console.log("I made it to the backend");
     db.FoodBank.create({
         bankName: req.body.bankName,
@@ -27,7 +29,9 @@ router.post("/post", function (req, res) {
         address: req.body.address,
         cityName: req.body.cityName,
         stateAbr: req.body.stateAbr,
-        zipCode: req.body.zipCode
+        zipCode: req.body.zipCode,
+        latitude: req.body.latitude,
+        longitude: req.body.longitude
     }).then(function (dbFoodbank) {
         res.json(dbFoodbank);
     });
