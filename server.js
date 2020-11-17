@@ -32,14 +32,14 @@ app.use('/', allRoutes);
 //syncing our sequelize models and then starting express app
 
 // Remember force: true restarts the server AND will need RESEEDING
-// db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: true }).then(function() {
 // Use above for model fixes and seeding (once only)
 
 // Use this line when running normally
-db.sequelize.sync({ force: false }).then(function() {
+// db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {
         // Comment in seedModels WHEN running first time
-        // seedModels()
+        seedModels()
         //         ^ SHOULD NORMALLY BE COMMENTED OUT
         console.log("App listening on PORT " + PORT);
     });
