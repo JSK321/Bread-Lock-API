@@ -1,0 +1,218 @@
+[
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 1,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 2,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 3,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 4,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 5,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 6,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 7,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 8,
+            "FoodBankId": 1
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 1,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 2,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 3,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 4,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 5,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 6,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 7,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 8,
+            "FoodBankId": 2
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 1,
+            "FoodBankId": 3
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 2,
+            "FoodBankId": 3
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 3,
+            "FoodBankId": 3
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 4,
+            "FoodBankId": 3
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 5,
+            "FoodBankId": 3
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 6,
+            "FoodBankId": 3
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 7,
+            "FoodBankId": 3
+        }
+    },
+    {
+        "model": "Pantry",
+        "data": {
+            "notClaimed": 1000,
+            "claimed": 0,
+            "StockId": 8,
+            "FoodBankId": 3
+        }
+    }
+]

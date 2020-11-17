@@ -1,0 +1,67 @@
+[
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Butter",
+            "size": 1,
+            "unitType": "lbs"
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Chicken",
+            "size": 1,
+            "unitType": "lbs"
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Turkey",
+            "size": 1,
+            "unitType": "lbs"
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Rice",
+            "size": 1,
+            "unitType": "lbs"
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Cheese",
+            "size": 1 ,
+            "unitType": "lbs"
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Tomatoes",
+            "size": 1,
+            "unitType": "lbs"
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Onions",
+            "size": 1,
+            "unitType": "lbs"
+        }
+    },
+    {
+        "model": "Stock",
+        "data": {
+            "stockName": "Bread",
+            "size": 1,
+            "unitType": "lbs"
+        }
+    }
+    
+]
