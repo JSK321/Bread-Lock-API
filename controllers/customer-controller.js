@@ -26,7 +26,7 @@ router.post("/post", function (req, res) {
     });
 });
 
-router.put("/edit/:id", (req, res) => {
+router.put("/put/:id", (req, res) => {
     db.Customer.update({
         firstName: req.body.firstName,
         lastName: req.body.lastName,

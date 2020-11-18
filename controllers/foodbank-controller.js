@@ -37,7 +37,7 @@ router.post("/post", function (req, res) {
     });
 });
 
-router.put("/edit/:id", (req, res) => {
+router.put("/put/:id", (req, res) => {
     db.FoodBank.update({
         bankName: req.body.bankName,
         phone: req.body.phone,
