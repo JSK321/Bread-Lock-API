@@ -18,7 +18,7 @@ router.post("/post", function (req, res) {
     FoodBankId: req.body.FoodBankId,
     CustomerId: req.body.CustomerId
   }).then(function (dbOrder) {
-    res.json(dbOrder);
+   return res.json(dbOrder);
   });
 });
 
