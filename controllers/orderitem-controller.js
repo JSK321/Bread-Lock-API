@@ -21,7 +21,7 @@ router.post("/post", function (req, res) {
     });
 });
 
-router.put("/edit/:id", (req, res) => {
+router.put("/put/:id", (req, res) => {
     db.OrderItem.update({
       orderAmount: req.body.orderAmount
     }, {
