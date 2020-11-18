@@ -30,7 +30,7 @@ router.get("/get/all/foodbank/:id", (req, res) => {
     include: [{
       model: db.OrderItem,
       include: [db.Stock]
-    }]}
+    }, db.Customer]}
   ).then((order) => {
     res.json(order);
     console.log(order);
@@ -43,7 +43,7 @@ router.get("/get/:id", (req, res) => {
     include: [{
       model: db.OrderItem,
       include: [db.Stock]
-    }]
+    }, db.FoodBank]
   }).then((order) => {
     res.json(order);
     console.log(order);
