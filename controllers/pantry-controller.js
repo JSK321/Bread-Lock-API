@@ -31,7 +31,7 @@ router.post("/post", function (req, res) {
     });
 });
 
-router.put("/edit/:id", (req, res) => {
+router.put("/put/:id", (req, res) => {
     db.Pantry.update({
       notClaimed: req.body.notClaimed,
       claimed: req.body.claimed

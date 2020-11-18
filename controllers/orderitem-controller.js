@@ -13,13 +13,15 @@ router.get("/get/all", (req, res) => {
 
 router.post("/post", function (req, res) {
     db.OrderItem.create({
-      orderAmount: req.body.orderAmount
+      orderAmount: req.body.orderAmount,
+      OrderId: req.body.OrderId,
+      StockId: req.body.StockId
     }).then(function (dbOrderitem) {
         res.json(dbOrderitem);
     });
 });
 
-router.put("/edit/:id", (req, res) => {
+router.put("/put/:id", (req, res) => {
     db.OrderItem.update({
       orderAmount: req.body.orderAmount
     }, {
