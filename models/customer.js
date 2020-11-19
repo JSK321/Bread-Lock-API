@@ -38,6 +38,7 @@ module.exports = function(sequelize, DataTypes) {
         Customer.hasMany(models.Order, {
             onDelete: "cascade"
         });
+        Customer.belongsTo(models.User);
     };
     
 
