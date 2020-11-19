@@ -1,6 +1,6 @@
 const express = require("express");
 const db = require("../models")
-const brcypt = require("bcrypt")
+const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const router = express.Router();
 
@@ -39,10 +39,9 @@ router.post("/login",(req,res)=>{
             // if they are the same create a token, and pass it back
             const userTokenInfo = {
                 email:foundUser.email,
-                id:foundUser.id,
-                name:foundUser.name
+                id:foundUser.id
             }
-            const token = jwt.sign(userTokenInfo,"secretString",{expiresIn:"2h"});
+            const token = jwt.sign(userTokenInfo,"flannelPjPants",{expiresIn:"2h"});
             return res.status(200).json({token:token})
             // if the password does not match, send wrong password
         }else {
@@ -60,7 +59,7 @@ router.get("/secrets",(req,res)=>{
 
     // if they do have an authentication token, verify authentication token validity
     token = req.headers.authorization.split(" ") [1]
-    const loggedInUser = jwt.verify(token, 'secretString', (err, data) => {
+    const loggedInUser = jwt.verify(token, 'flannelPjPants', (err, data) => {
         // if it's not valid, return false
         if (err) {
             return false
@@ -70,7 +69,6 @@ router.get("/secrets",(req,res)=>{
             return data
         }
     });
-    console.log(loggedInUser)
     res.json(loggedInUser);
 })
 
