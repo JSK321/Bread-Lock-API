@@ -1,6 +1,9 @@
-const db = require("../../models")
+const express = require("express");
+const db = require("../models")
 const brcypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
+const router = express.Router();
+
 
 router.get("/get/all", (req, res) => {
     db.User.findAll().then((user) => {

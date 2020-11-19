@@ -27,7 +27,8 @@ router.post("/post", function (req, res) {
         address: req.body.address,
         cityName: req.body.cityName,
         stateAbr: req.body.stateAbr,
-        zipCode: req.body.zipCode
+        zipCode: req.body.zipCode,
+        UserId: req.body.UserId
     }).then(function (dbCustomer) {
         res.json(dbCustomer);
     });
@@ -42,7 +43,8 @@ router.put("/put/:id", (req, res) => {
         address: req.body.address,
         cityName: req.body.cityName,
         stateAbr: req.body.stateAbr,
-        zipCode: req.body.zipCode
+        zipCode: req.body.zipCode,
+        UserId: req.body.UserId
     }, {
       where: {
         id: req.params.id

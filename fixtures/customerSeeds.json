@@ -9,8 +9,8 @@
         "address": "1410 NE Campus Parkway",
         "cityName": "Seattle",
         "stateAbr": "WA",
-        "zipCode": "98195"
-
+        "zipCode": "98195",
+        "UserId": "1"
       }
     },
     {
@@ -23,10 +23,9 @@
           "address": "2800 Southcenter Mall",
           "cityName": "Seattle",
           "stateAbr": "WA",
-          "zipCode": "98188"
-  
+          "zipCode": "98188",
+          "UserId": "2"
         }
-      }
-    
+      }   
   ]
   
