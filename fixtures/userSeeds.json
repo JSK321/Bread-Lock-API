@@ -1,0 +1,16 @@
+[
+    {
+      "model": "User",
+      "data": {
+        "email": "johns@thisdomain.com",
+        "password": "johnsmith"
+      }
+    },
+    {
+        "model": "User",
+        "data": {
+          "email": "janed@thisdomain.com",
+          "password": "janedoe!"
+        }
+      }   
+  ]
