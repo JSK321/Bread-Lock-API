@@ -11,6 +11,13 @@ router.get("/get/all", (req, res) => {
     });
 });
 
+router.get("/get/:id", (req, res) => {
+  db.Customer.findOne({where: {id: req.params.id}}).then((customer) => {
+      res.json(customer);
+      console.log(customer);
+  });
+});
+
 router.post("/post", function (req, res) {
     db.Customer.create({
         firstName: req.body.firstName,
