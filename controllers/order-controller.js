@@ -62,10 +62,24 @@ router.post("/post", function (req, res) {
   });
 });
 
-router.put("/put/:id", (req, res) => {
+router.put("/put/foodbankwork/:id", (req, res) => {
+  db.Order.update({
+    recieved: req.body.recieved
+  }, {
+    where: {
+      id: req.params.id
+    }
+  }).then(editOrder => {
+    res.json(editOrder);
+  }).catch(err => {
+    res.status(500).send("Encounted an error with update")
+  })
+})
+
+router.put("/put/customer/:id", (req, res) => {
   db.Order.update({
     orderDate: req.body.orderDate,
-    recieved: req.body.recieved
+    orderTime: req.body.orderTime
   }, {
     where: {
       id: req.params.id
