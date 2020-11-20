@@ -5,6 +5,28 @@ const jwt = require("jsonwebtoken")
 const router = express.Router();
 
 
+const checkAuthentification = request => {
+    console.log("I'm in the function")
+    if (!request.headers.authorization) {
+        console.log("I failed");
+        return false
+    }
+    // if they do have an authentication token, verify authentication token validity
+    const token = request.headers.authorization.split(" ") [1]
+    const loggedInUser = jwt.verify(token, 'flannelPjPants', (err, data) => {
+        // if it's not valid, return false
+        if (err) {
+            console.log("I failed");
+            return false
+        } 
+        // if it is, return the data
+        else {
+            return data
+        }
+    });
+    return loggedInUser;
+}
+
 router.get("/get/all", (req, res) => {
     db.User.findAll().then((user) => {
         res.json(user);
@@ -52,24 +74,10 @@ router.post("/login",(req,res)=>{
  
 // get route checks for authentication
 router.get("/secrets",(req,res)=>{
-    // if they don't have authentication, return 401 err you don't have authentication
-    if (!req.headers.authorization) {
-        return res.status(401).send("no auth header present")
-    }
-
-    // if they do have an authentication token, verify authentication token validity
-    token = req.headers.authorization.split(" ") [1]
-    const loggedInUser = jwt.verify(token, 'flannelPjPants', (err, data) => {
-        // if it's not valid, return false
-        if (err) {
-            return false
-        } 
-        // if it is, return the data
-        else {
-            return data
-        }
-    });
-    res.json(loggedInUser);
+    console.log("I'm in the route");
+    const logInUser = checkAuthentification(req);
+    console.log(logInUser);
+    res.json(logInUser)
 })
 
 module.exports = router 
