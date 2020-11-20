@@ -3,29 +3,7 @@ const db = require("../models")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const router = express.Router();
-
-
-const checkAuthentification = request => {
-    console.log("I'm in the function")
-    if (!request.headers.authorization) {
-        console.log("I failed");
-        return false
-    }
-    // if they do have an authentication token, verify authentication token validity
-    const token = request.headers.authorization.split(" ") [1]
-    const loggedInUser = jwt.verify(token, 'flannelPjPants', (err, data) => {
-        // if it's not valid, return false
-        if (err) {
-            console.log("I failed");
-            return false
-        } 
-        // if it is, return the data
-        else {
-            return data
-        }
-    });
-    return loggedInUser;
-}
+const checkAuth = require("./checkAuth")
 
 router.get("/get/all", (req, res) => {
     db.User.findAll().then((user) => {
@@ -74,10 +52,13 @@ router.post("/login",(req,res)=>{
  
 // get route checks for authentication
 router.get("/secrets",(req,res)=>{
-    console.log("I'm in the route");
-    const logInUser = checkAuthentification(req);
+    const logInUser = checkAuth(req);
     console.log(logInUser);
-    res.json(logInUser)
+    if(!logInUser)
+    {
+        return res.status(401).send("invalid token")
+    }
+    res.status(200).send("valid token")
 })
 
 module.exports = router 

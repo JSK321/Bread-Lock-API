@@ -1,8 +1,7 @@
 const express = require("express");
-
 const router = express.Router();
-
 const db = require("../models");
+const checkAuth = require("./checkAuth")
 
 router.get("/get/all", (req, res) => {
     db.Customer.findAll().then((customer) => {
