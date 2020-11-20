@@ -46,13 +46,13 @@ router.put("/put/:id", (req, res) => {
     })
   })
 
-router.delete("/delete/:id", (req, res) => {
-    console.log(req.params.id);
-    db.Pantry.destroy({ where: { id: req.params.id } }).then(removePantry => {
-        console.log("Deleted");
-        res.json(removePantry);
-    });
-});
+// router.delete("/delete/:id", (req, res) => {
+//     console.log(req.params.id);
+//     db.Pantry.destroy({ where: { id: req.params.id } }).then(removePantry => {
+//         console.log("Deleted");
+//         res.json(removePantry);
+//     });
+// });
 
 
 module.exports = router;

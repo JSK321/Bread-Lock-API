@@ -68,13 +68,13 @@ router.put("/put/:id", (req, res) => {
     })
   })
 
-router.delete("/delete/:id", (req, res) => {
-    console.log(req.params.id);
-    db.Customer.destroy({ where: { id: req.params.id } }).then(removeCustomer => {
-        console.log("Deleted");
-        res.json(removeCustomer);
-    });
-});
+// router.delete("/delete/:id", (req, res) => {
+//     console.log(req.params.id);
+//     db.Customer.destroy({ where: { id: req.params.id } }).then(removeCustomer => {
+//         console.log("Deleted");
+//         res.json(removeCustomer);
+//     });
+// });
 
 router.post("/login",(req,res)=>{
   db.Customer.findOne({
