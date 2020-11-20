@@ -1,8 +1,7 @@
 const express = require("express");
-
 const router = express.Router();
-
 const db = require("../models");
+const checkAuth = require("./checkAuth")
 
 router.get("/get/all", (req, res) => {
   db.Order.findAll().then((order) => {
@@ -12,6 +11,10 @@ router.get("/get/all", (req, res) => {
 });
 
 router.get("/get/all/customer/:id", (req, res) => {
+  const loggedInUser = checkAuth(req)
+  if (!loggedInUser) {
+    return res.status(401).send("Please Log in First")
+  }
   db.Order.findAll({
     where: { CustomerId: req.params.id },
     include: [{
