@@ -10,13 +10,13 @@ router.get("/get/all", (req, res) => {
   });
 });
 
-router.get("/get/all/customer/:id", (req, res) => {
+router.get("/get/all/customer/", (req, res) => {
   const loggedInUser = checkAuth(req)
   if (!loggedInUser) {
     return res.status(401).send("Please Log in First")
   }
   db.Order.findAll({
-    where: { CustomerId: req.params.id },
+    where: { CustomerId: loggedInUser.id },
     include: [{
       model: db.OrderItem,
       include: [db.Stock]
@@ -55,11 +55,15 @@ router.get("/get/:id", (req, res) => {
 
 
 router.post("/post", function (req, res) {
+  const loggedInUser = checkAuth(req);
+  if(!loggedInUser){
+    return res.status(401).send("must be logged in")
+  }
   db.Order.create({
     orderDate: req.body.orderDate,
     orderTime: req.body.orderTime,
     FoodBankId: req.body.FoodBankId,
-    CustomerId: req.body.CustomerId
+    CustomerId: loggedInUser.id
   }).then(function (dbOrder) {
     res.json(dbOrder);
   });
@@ -80,6 +84,10 @@ router.put("/put/foodbankwork/:id", (req, res) => {
 })
 
 router.put("/put/customer/:id", (req, res) => {
+  const loggedInUser = checkAuth(req)
+  if (!loggedInUser) {
+    return res.status(401).send("Please Log in First")
+  }
   db.Order.update({
     orderDate: req.body.orderDate,
     orderTime: req.body.orderTime

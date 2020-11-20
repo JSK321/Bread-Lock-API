@@ -13,6 +13,10 @@ router.get("/get/all", (req, res) => {
 });
 
 router.get("/get/:id", (req, res) => {
+  const loggedInUser = checkAuth(req);
+  if(!loggedInUser){
+    return res.status(401).send("must be logged in")
+  }
   db.Customer.findOne({where: {id: req.params.id}}).then((customer) => {
       res.json(customer);
       console.log(customer);
@@ -36,6 +40,13 @@ router.post("/post", function (req, res) {
 });
 
 router.put("/put/:id", (req, res) => {
+  const loggedInUser = checkAuth(req);
+  if(!loggedInUser){
+    return res.status(401).send("must be logged in")
+  }
+  if(loggedInUser.id !== req.params.id) {
+    return res.status(401).send("cannot edit user not belonging to you")
+  }
     db.Customer.update({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -101,7 +112,7 @@ router.get("/secrets",(req,res)=>{
   {
       return res.status(401).send("invalid token")
   }
-  res.status(200).send("valid token")
+  res.status(200).send(logInUser)
 })
 
 

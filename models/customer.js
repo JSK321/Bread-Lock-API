@@ -50,10 +50,9 @@ module.exports = function(sequelize, DataTypes) {
         });
     };
 
-    Customer.beforeCreate(function(user) {
-        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null)
+    Customer.beforeCreate(function(customer) {
+        customer.password = bcrypt.hashSync(customer.password, bcrypt.genSaltSync(10), null)
     }) 
-    
     return Customer;
 }
 
