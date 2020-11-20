@@ -41,10 +41,12 @@ router.post("/post", function (req, res) {
 
 router.put("/put/:id", (req, res) => {
   const loggedInUser = checkAuth(req);
+  console.log(loggedInUser)
+  console.log(req.params)
   if(!loggedInUser){
     return res.status(401).send("must be logged in")
   }
-  if(loggedInUser.id !== req.params.id) {
+  if(loggedInUser.id !== parseInt(req.params.id)) {
     return res.status(401).send("cannot edit user not belonging to you")
   }
     db.Customer.update({
