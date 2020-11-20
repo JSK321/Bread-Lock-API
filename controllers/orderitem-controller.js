@@ -35,13 +35,13 @@ router.put("/put/:id", (req, res) => {
     })
   })
 
-router.delete("/delete/:id", (req, res) => {
-    console.log(req.params.id);
-    db.OrderItem.destroy({ where: { id: req.params.id } }).then(removeOrderitem => {
-        console.log("Deleted");
-        res.json(removeOrderitem);
-    });
-});
+// router.delete("/delete/:id", (req, res) => {
+//     console.log(req.params.id);
+//     db.OrderItem.destroy({ where: { id: req.params.id } }).then(removeOrderitem => {
+//         console.log("Deleted");
+//         res.json(removeOrderitem);
+//     });
+// });
 
 
 module.exports = router;
