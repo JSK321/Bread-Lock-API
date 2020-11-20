@@ -7,7 +7,6 @@ const orderRoutes = require("./order-controller");
 const orderitemRoutes = require("./orderitem-controller");
 const pantryRoutes = require("./pantry-controller");
 const stockRoutes = require("./stock-controller");
-const userRoutes = require("./user-controller");
 
 router.get("/", (req,res)=>{
     res.send("Welcome to BreadLock")
@@ -19,6 +18,5 @@ router.use("/api/order",orderRoutes)
 router.use("/api/orderitem",orderitemRoutes)
 router.use("/api/pantry",pantryRoutes)
 router.use("/api/stock",stockRoutes)
-router.use("/api/user",userRoutes)
 
 module.exports = router
