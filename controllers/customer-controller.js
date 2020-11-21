@@ -13,6 +13,7 @@ router.get("/get/all", (req, res) => {
 });
 
 router.get("/get/:id", (req, res) => {
+  // console.log(req)
   const loggedInUser = checkAuth(req);
   if(!loggedInUser){
     return res.status(401).send("must be logged in")

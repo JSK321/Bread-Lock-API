@@ -46,6 +46,8 @@ router.put("/put/:id", (req, res) => {
         cityName: req.body.cityName,
         stateAbr: req.body.stateAbr,
         zipCode: req.body.zipCode,
+        latitude: req.body.latitude,
+        longitude: req.body.longitude,
         availability: rep.body.availability
     }, {
       where: {
