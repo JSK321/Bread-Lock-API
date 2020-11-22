@@ -8,20 +8,20 @@ const db = require("../models");
 router.get("/get/all", (req, res) => {
     db.FoodBank.findAll().then((foodbank) => {
         res.json(foodbank);
-        console.log(foodbank);
+        // console.log(foodbank);
     });
 });
 
 router.get("/get/:id", (req, res) => {
   db.FoodBank.findOne({where: {id: req.params.id}}).then((foodbank) => {
       res.json(foodbank);
-      console.log(foodbank);
+      // console.log(foodbank);
   });
 });
 
 router.post("/post", function (req, res) {
-  console.log(req.body)
-  console.log("I made it to the backend");
+  // console.log(req.body)
+  // console.log("I made it to the backend");
     db.FoodBank.create({
         bankName: req.body.bankName,
         phone: req.body.phone,
@@ -61,9 +61,9 @@ router.put("/put/:id", (req, res) => {
   })
 
 router.delete("/delete/:id", (req, res) => {
-    console.log(req.params.id);
+    // console.log(req.params.id);
     db.FoodBank.destroy({ where: { id: req.params.id } }).then(removeFoodbank => {
-        console.log("Deleted");
+        // console.log("Deleted");
         res.json(removeFoodbank);
     });
 });

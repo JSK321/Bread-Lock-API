@@ -1,7 +1,9 @@
 //dependencies 
 const express = require("express")
+require("dotenv").config();
 const cors = require('cors')
 const seedModels = require('./seedModels')
+
 
 
 //sets up the express app
