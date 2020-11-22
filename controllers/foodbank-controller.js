@@ -48,7 +48,7 @@ router.put("/put/:id", (req, res) => {
         zipCode: req.body.zipCode,
         latitude: req.body.latitude,
         longitude: req.body.longitude,
-        availability: rep.body.availability
+        availability: req.body.availability
     }, {
       where: {
         id: req.params.id
