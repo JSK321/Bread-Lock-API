@@ -5,7 +5,7 @@ const router = express.Router();
 const db = require("../models");
 
 router.get("/get/all/:id", (req, res) => {
-  db.OrderItem.findOne({ where: { OrderId: req.params.id }, include: [db.Stock]}).then((orderitem) => {
+  db.OrderItem.findAll({ where: { OrderId: req.params.id }, include: [db.Stock]}).then((orderitem) => {
     res.json(orderitem);
     console.log(orderitem);
   });
