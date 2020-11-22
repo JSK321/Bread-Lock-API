@@ -7,7 +7,7 @@ const db = require("../models");
 router.get("/get/all", (req, res) => {
     db.Stock.findAll().then((stock) => {
         res.json(stock);
-        console.log(stock);
+        // console.log(stock);
     });
 });
 
@@ -37,13 +37,13 @@ router.put("/put/:id", (req, res) => {
     })
   })
 
-router.delete("/delete/:id", (req, res) => {
-    console.log(req.params.id);
-    db.Stock.destroy({ where: { id: req.params.id } }).then(removeStock => {
-        console.log("Deleted");
-        res.json(removeStock);
-    });
-});
+// router.delete("/delete/:id", (req, res) => {
+//     console.log(req.params.id);
+//     db.Stock.destroy({ where: { id: req.params.id } }).then(removeStock => {
+//         console.log("Deleted");
+//         res.json(removeStock);
+//     });
+// });
 
 
 module.exports = router;

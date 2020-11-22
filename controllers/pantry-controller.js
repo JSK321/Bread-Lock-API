@@ -7,7 +7,7 @@ const db = require("../models");
 router.get("/get/all", (req, res) => {
     db.Pantry.findAll({include: [db.Stock] }).then((pantry) => {
         res.json(pantry);
-        console.log(pantry);
+        // console.log(pantry);
     });
 });
 
@@ -15,7 +15,7 @@ router.get("/get/:id", (req, res) => {
   db.Pantry.findAll({where: {FoodBankId: req.params.id},
     include: [db.Stock] }).then((foodbank) => {
       res.json(foodbank);
-      console.log(foodbank);
+      // console.log(foodbank);
   });
 });
 
@@ -46,13 +46,13 @@ router.put("/put/:id", (req, res) => {
     })
   })
 
-router.delete("/delete/:id", (req, res) => {
-    console.log(req.params.id);
-    db.Pantry.destroy({ where: { id: req.params.id } }).then(removePantry => {
-        console.log("Deleted");
-        res.json(removePantry);
-    });
-});
+// router.delete("/delete/:id", (req, res) => {
+//     console.log(req.params.id);
+//     db.Pantry.destroy({ where: { id: req.params.id } }).then(removePantry => {
+//         console.log("Deleted");
+//         res.json(removePantry);
+//     });
+// });
 
 
 module.exports = router;

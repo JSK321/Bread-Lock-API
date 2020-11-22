@@ -1,3 +1,5 @@
+const bcrypt = require("bcrypt")
+
 module.exports = function(sequelize, DataTypes) {
     // Store Customer values for interaction with other models
     const Customer = sequelize.define("Customer", {
@@ -10,9 +12,17 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         // email force not null would be better, for login later
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false
+        email:{
+            type:DataTypes.STRING,
+            unique:true,
+            allowNull:false
+        },
+        password:{
+            type:DataTypes.STRING,
+            required:true,
+            validate:{
+                len:[8]
+            }
         },
         // Everything else "can" be null
         phone: {
@@ -39,8 +49,10 @@ module.exports = function(sequelize, DataTypes) {
             onDelete: "cascade"
         });
     };
-    
 
+    Customer.beforeCreate(function(customer) {
+        customer.password = bcrypt.hashSync(customer.password, bcrypt.genSaltSync(10), null)
+    }) 
     return Customer;
 }
 
