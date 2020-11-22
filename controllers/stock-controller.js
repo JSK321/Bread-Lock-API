@@ -7,7 +7,7 @@ const db = require("../models");
 router.get("/get/all", (req, res) => {
     db.Stock.findAll().then((stock) => {
         res.json(stock);
-        console.log(stock);
+        // console.log(stock);
     });
 });
 
