@@ -21,12 +21,12 @@ var allRoutes = require('./controllers')
 
 // Production Cors
 // Fix Heroku Deployed to the actual live site
-app.use(cors({
-    origin:["https://breadlock.herokuapp.com/", "https://breadlockapi.herokuapp.com"]
-}))
+// app.use(cors({
+//     origin:["https://breadlock.herokuapp.com/"]
+// }))
 
 // Dev Cors
-// app.use(cors())
+app.use(cors())
 
 //Set up routes
 app.use('/', allRoutes);
