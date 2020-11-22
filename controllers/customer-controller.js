@@ -8,7 +8,7 @@ const checkAuth = require("./checkAuth")
 router.get("/get/all", (req, res) => {
     db.Customer.findAll().then((customer) => {
         res.json(customer);
-        console.log(customer);
+        // console.log(customer);
     });
 });
 
@@ -20,7 +20,7 @@ router.get("/get/:id", (req, res) => {
   }
   db.Customer.findOne({where: {id: req.params.id}}).then((customer) => {
       res.json(customer);
-      console.log(customer);
+      // console.log(customer);
   });
 });
 
@@ -42,8 +42,8 @@ router.post("/post", function (req, res) {
 
 router.put("/put/:id", (req, res) => {
   const loggedInUser = checkAuth(req);
-  console.log(loggedInUser)
-  console.log(req.params)
+  // console.log(loggedInUser)
+  // console.log(req.params)
   if(!loggedInUser){
     return res.status(401).send("must be logged in")
   }
@@ -98,7 +98,7 @@ router.post("/login",(req,res)=>{
               email:foundUser.email,
               id:foundUser.id
           }
-          const token = jwt.sign(userTokenInfo,"flannelPjPants",{expiresIn:"2h"});
+          const token = jwt.sign(userTokenInfo,process.env.JWT_SECRET,{expiresIn:"2h"});
           return res.status(200).json({token:token})
           // if the password does not match, send wrong password
       }else {
@@ -110,7 +110,7 @@ router.post("/login",(req,res)=>{
 // get route checks for authentication
 router.get("/secrets",(req,res)=>{
   const logInUser = checkAuth(req);
-  console.log(logInUser);
+  // console.log(logInUser);
   if(!logInUser)
   {
       return res.status(401).send("invalid token")
