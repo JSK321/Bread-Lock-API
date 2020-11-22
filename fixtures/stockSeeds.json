@@ -2,7 +2,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Butter",
+            "stockName": "butter",
             "size": 1,
             "unitType": "lbs"
         }
@@ -10,7 +10,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Chicken",
+            "stockName": "chicken",
             "size": 1,
             "unitType": "lbs"
         }
@@ -18,7 +18,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Turkey",
+            "stockName": "turkey",
             "size": 1,
             "unitType": "lbs"
         }
@@ -26,7 +26,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Rice",
+            "stockName": "rice",
             "size": 1,
             "unitType": "lbs"
         }
@@ -34,7 +34,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Cheese",
+            "stockName": "cheese",
             "size": 1 ,
             "unitType": "lbs"
         }
@@ -42,7 +42,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Tomatoes",
+            "stockName": "tomatoes",
             "size": 1,
             "unitType": "lbs"
         }
@@ -50,7 +50,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Onions",
+            "stockName": "onions",
             "size": 1,
             "unitType": "lbs"
         }
@@ -58,7 +58,7 @@
     {
         "model": "Stock",
         "data": {
-            "stockName": "Bread",
+            "stockName": "bread",
             "size": 1,
             "unitType": "lbs"
         }
